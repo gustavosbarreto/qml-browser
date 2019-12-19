@@ -1,5 +1,5 @@
-#ifndef WINDOW_HPP
-#define WINDOW_HPP
+#ifndef WINDOWAPI_HPP
+#define WINDOWAPI_HPP
 
 #include <QObject>
 #include <QStringList>
@@ -7,14 +7,14 @@
 
 class History;
 
-class Window : public QObject
+class WindowAPI : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(QString location MEMBER m_location NOTIFY locationChanged)
     Q_PROPERTY(QString title MEMBER m_title NOTIFY titleChanged)
 
 public:
-    explicit Window(QObject *parent = nullptr);
+    explicit WindowAPI(QObject *parent = nullptr);
 
     void setHistory(History *history);
 
@@ -36,4 +36,4 @@ private:
     QString m_title;
 };
 
-#endif // WINDOW_HPP
+#endif // WINDOWAPI_HPP

@@ -1,6 +1,6 @@
 #include "mainwindow.hpp"
 #include "ui_mainwindow.h"
-#include "window.hpp"
+#include "windowapi.hpp"
 #include "history.hpp"
 
 #include <QLineEdit>
@@ -43,10 +43,10 @@ MainWindow::MainWindow(QWidget *parent)
         ui->quickWidget->setSource(url);
     });
 
-    m_window = new Window(this);
+    m_window = new WindowAPI(this);
     m_window->setHistory(m_history);
 
-    connect(m_window, &Window::locationChanged, this, [=](const QString &location) {
+    connect(m_window, &WindowAPI::locationChanged, this, [=](const QString &location) {
         m_addressLineEdit->setText(location);
 
         // Wait for QML signal handlers in progress
@@ -55,7 +55,7 @@ MainWindow::MainWindow(QWidget *parent)
         });
     });
 
-    connect(m_window, &Window::titleChanged, this, [=](const QString &title) {
+    connect(m_window, &WindowAPI::titleChanged, this, [=](const QString &title) {
        setWindowTitle(title);
     });
 

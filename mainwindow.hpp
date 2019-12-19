@@ -9,7 +9,7 @@ QT_END_NAMESPACE
 
 class QLineEdit;
 
-class Window;
+class WindowAPI;
 class History;
 
 class MainWindow : public QMainWindow
@@ -30,7 +30,7 @@ private:
     Ui::MainWindow *ui;
 
     QLineEdit *m_addressLineEdit;
-    Window *m_window;
+    WindowAPI *m_window;
     History *m_history;
 };
 #endif // MAINWINDOW_HPP

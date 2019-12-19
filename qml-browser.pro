@@ -19,12 +19,12 @@ SOURCES += \
     history.cpp \
     main.cpp \
     mainwindow.cpp \
-    window.cpp
+    windowapi.cpp
 
 HEADERS += \
     history.hpp \
     mainwindow.hpp \
-    window.hpp
+    windowapi.hpp
 
 FORMS += \
     mainwindow.ui

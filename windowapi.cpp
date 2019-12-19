@@ -1,4 +1,4 @@
-#include "window.hpp"
+#include "windowapi.hpp"
 
 #include <QDebug>
 #include <QMessageBox>
@@ -7,11 +7,11 @@
 
 #include "history.hpp"
 
-Window::Window(QObject *parent) : QObject(parent)
+WindowAPI::WindowAPI(QObject *parent) : QObject(parent)
 {
 }
 
-void Window::setHistory(History *history)
+void WindowAPI::setHistory(History *history)
 {
     m_history = history;
 
@@ -20,28 +20,28 @@ void Window::setHistory(History *history)
     });
 }
 
-void Window::back()
+void WindowAPI::back()
 {
     m_history->back();
 }
 
-void Window::forward()
+void WindowAPI::forward()
 {
     m_history->back();
 }
 
-void Window::alert(const QString &message)
+void WindowAPI::alert(const QString &message)
 {
     QMessageBox::warning((QWidget *)parent(), "Warning", message);
 }
 
-QVariant Window::prompt(const QString &title, const QVariant &defaultValue)
+QVariant WindowAPI::prompt(const QString &title, const QVariant &defaultValue)
 {
     QVariant value = QInputDialog::getText((QWidget *)parent(), m_title, title, QLineEdit::Normal, defaultValue.toString());
     return value;
 }
 
-bool Window::confirm(const QString &message)
+bool WindowAPI::confirm(const QString &message)
 {
     return QMessageBox::question((QWidget *)parent(), m_title, message) == QMessageBox::Yes;
 }
