@@ -17,6 +17,11 @@ MainWindow::MainWindow(QWidget *parent)
     ui->quickWidget->setClearColor(Qt::white);
 
     m_addressLineEdit = new QLineEdit(this);
+
+    QTimer::singleShot(0, this, [=]() {
+        m_addressLineEdit->setFocus();
+    });
+
     ui->toolBar->insertWidget(ui->actionGo, m_addressLineEdit);
 
     connect(m_addressLineEdit, &QLineEdit::returnPressed, this, &MainWindow::loadAddress);
