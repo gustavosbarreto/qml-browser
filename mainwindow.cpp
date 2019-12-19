@@ -59,7 +59,7 @@ MainWindow::MainWindow(QWidget *parent)
        setWindowTitle(title);
     });
 
-    injectCodes();
+    injectAPI();
 }
 
 MainWindow::~MainWindow()
@@ -75,7 +75,7 @@ void MainWindow::loadAddress()
     m_history->append(ui->quickWidget->source().toString());
 }
 
-void MainWindow::injectCodes()
+void MainWindow::injectAPI()
 {
     QQmlContext *context = ui->quickWidget->engine()->rootContext();
 

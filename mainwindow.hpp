@@ -24,7 +24,7 @@ private slots:
     void loadAddress();
 
 private:
-    void injectCodes();
+    void injectAPI();
 
 private:
     Ui::MainWindow *ui;
