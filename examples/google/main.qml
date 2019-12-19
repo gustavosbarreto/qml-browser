@@ -2,6 +2,8 @@ import QtQuick 2.12
 import QtQuick.Layouts 1.1
 
 Rectangle {
+    Component.onCompleted: window.title = "Google Loves QML"
+
     Column {
         anchors.centerIn: parent
         spacing: 8

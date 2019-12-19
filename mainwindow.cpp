@@ -55,6 +55,10 @@ MainWindow::MainWindow(QWidget *parent)
         });
     });
 
+    connect(m_window, &Window::titleChanged, this, [=](const QString &title) {
+       setWindowTitle(title);
+    });
+
     injectCodes();
 }
 
