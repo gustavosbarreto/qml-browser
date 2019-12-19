@@ -40,3 +40,8 @@ QVariant Window::prompt(const QString &title, const QVariant &defaultValue)
     QVariant value = QInputDialog::getText((QWidget *)parent(), m_title, title, QLineEdit::Normal, defaultValue.toString());
     return value;
 }
+
+bool Window::confirm(const QString &message)
+{
+    return QMessageBox::question((QWidget *)parent(), m_title, message) == QMessageBox::Yes;
+}

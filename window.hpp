@@ -28,6 +28,7 @@ public slots:
 
     void alert(const QString &message);
     QVariant prompt(const QString &title, const QVariant &defaultValue = "");
+    bool confirm(const QString &message);
 
 private:
     History *m_history;
