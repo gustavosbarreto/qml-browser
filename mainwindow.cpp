@@ -1,6 +1,7 @@
 #include "mainwindow.hpp"
 #include "ui_mainwindow.h"
 #include "window.hpp"
+#include "history.hpp"
 
 #include <QLineEdit>
 #include <QQmlEngine>
@@ -21,29 +22,32 @@ MainWindow::MainWindow(QWidget *parent)
     connect(m_addressLineEdit, &QLineEdit::returnPressed, this, &MainWindow::loadAddress);
     connect(ui->actionGo, &QAction::triggered, this, &MainWindow::loadAddress);
 
-    m_window = new Window(this);
+    m_history = new History(this);
 
-    connect(m_window, &Window::locationChanged, this, [=](const QString &location) {
-       m_addressLineEdit->setText(location);
-
-       // Wait for QML signal handlers in progress
-       QTimer::singleShot(0, [=]() {
-          loadAddress();
-       });
+    connect(m_history, &History::updated, this, [=](const QString &url) {
+        ui->quickWidget->setSource(QUrl(url));
+        m_addressLineEdit->setText(url);
     });
 
-    connect(m_window, &Window::historyChanged, this, [=]() {
-       ui->quickWidget->setSource(QUrl(m_window->currentHistoryItem()));
-        m_addressLineEdit->setText(m_window->currentHistoryItem());
-    });
-
-    connect(ui->actionBack, &QAction::triggered, m_window, &Window::back);
-    connect(ui->actionForward, &QAction::triggered, m_window, &Window::forward);
+    connect(ui->actionBack, &QAction::triggered, m_history, &History::back);
+    connect(ui->actionForward, &QAction::triggered, m_history, &History::forward);
     connect(ui->actionRefresh, &QAction::triggered, this, [=]() {
         const QUrl &url = ui->quickWidget->source();
         ui->quickWidget->engine()->clearComponentCache();
         ui->quickWidget->setSource(QUrl());
         ui->quickWidget->setSource(url);
+    });
+
+    m_window = new Window(this);
+    m_window->setHistory(m_history);
+
+    connect(m_window, &Window::locationChanged, this, [=](const QString &location) {
+        m_addressLineEdit->setText(location);
+
+        // Wait for QML signal handlers in progress
+        QTimer::singleShot(0, [=]() {
+            loadAddress();
+        });
     });
 
     injectCodes();
@@ -58,7 +62,7 @@ void MainWindow::loadAddress()
 {
     ui->quickWidget->engine()->clearComponentCache();
     ui->quickWidget->setSource(QUrl(m_addressLineEdit->text()));
-    m_window->addToHistory(ui->quickWidget->source().toString());
+    m_history->append(ui->quickWidget->source().toString());
 }
 
 void MainWindow::injectCodes()

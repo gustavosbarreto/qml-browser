@@ -8,7 +8,9 @@ namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
 
 class QLineEdit;
+
 class Window;
+class History;
 
 class MainWindow : public QMainWindow
 {
@@ -29,5 +31,6 @@ private:
 
     QLineEdit *m_addressLineEdit;
     Window *m_window;
+    History *m_history;
 };
 #endif // MAINWINDOW_HPP

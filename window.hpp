@@ -4,6 +4,8 @@
 #include <QObject>
 #include <QStringList>
 
+class History;
+
 class Window : public QObject
 {
     Q_OBJECT
@@ -13,14 +15,11 @@ class Window : public QObject
 public:
     explicit Window(QObject *parent = nullptr);
 
-    void addToHistory(const QString &url);
-
-    inline QString currentHistoryItem() { return m_history[m_historyIndex]; }
+    void setHistory(History *history);
 
 signals:
     void locationChanged(const QString &location);
     void titleChanged(const QString &title);
-    void historyChanged();
 
 public slots:
     void back();
@@ -29,10 +28,9 @@ public slots:
     void alert(const QString &message);
 
 private:
+    History *m_history;
     QString m_location;
     QString m_title;
-    QStringList m_history;
-    int m_historyIndex = -1;
 };
 
 #endif // WINDOW_HPP

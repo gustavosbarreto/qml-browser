@@ -3,36 +3,29 @@
 #include <QDebug>
 #include <QMessageBox>
 
+#include "history.hpp"
+
 Window::Window(QObject *parent) : QObject(parent)
 {
 }
 
-void Window::addToHistory(const QString &url)
+void Window::setHistory(History *history)
 {
-    if (m_historyIndex > 0) {
-        while (m_history.size() > m_historyIndex + 1) {
-            m_history.removeLast();
-        }
-    }
+    m_history = history;
 
-    m_history << url;
-    m_historyIndex++;
+    connect(history, &History::updated, [=](const QString &url) {
+       m_location = url;
+    });
 }
 
 void Window::back()
 {
-    if (m_historyIndex > 0) {
-        m_location = m_history[--m_historyIndex];
-        emit historyChanged();
-    }
+    m_history->back();
 }
 
 void Window::forward()
 {
-    if (m_historyIndex < m_history.size() - 1) {
-        m_location = m_history[++m_historyIndex];
-        emit historyChanged();
-    }
+    m_history->back();
 }
 
 void Window::alert(const QString &message)
