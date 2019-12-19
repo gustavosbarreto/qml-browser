@@ -27,6 +27,8 @@ Run the `qml-browser` and type in the address bar: http://localhost:8000/main.qm
 
 ## JavaScript API
 
+### Navigation
+
 `window.back()`  [method]
 
 The back method moves back one page in the history
@@ -39,6 +41,24 @@ Moves forward one page in the session history
 
 This property sets or returns the entire URL of the current page
 
+### Window
+
 `window.title` [property]
 
+### Dialog
+
 This property sets or returns the title of the current page
+
+`window.alert(message)` [method]
+
+Displays an alert dialog with th specified message and an OK button.
+
+`window.prompt(message, value)` [method]
+
+Returns the text entered by the user in a prompt dialog.
+
+`window.confirm(message)` [method]
+
+Displays a dialog with a message that the user needs to respond to.
+
+
