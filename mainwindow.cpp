@@ -71,6 +71,7 @@ void MainWindow::loadAddress()
 {
     ui->quickWidget->engine()->clearComponentCache();
     ui->quickWidget->setSource(QUrl(m_addressLineEdit->text()));
+    ui->quickWidget->setFocus();
     m_history->append(ui->quickWidget->source().toString());
 }
 
