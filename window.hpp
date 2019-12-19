@@ -3,6 +3,7 @@
 
 #include <QObject>
 #include <QStringList>
+#include <QVariant>
 
 class History;
 
@@ -26,6 +27,7 @@ public slots:
     void forward();
 
     void alert(const QString &message);
+    QVariant prompt(const QString &title, const QVariant &defaultValue = "");
 
 private:
     History *m_history;
