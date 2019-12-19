@@ -37,8 +37,8 @@ MainWindow::MainWindow(QWidget *parent)
         m_addressLineEdit->setText(m_window->currentHistoryItem());
     });
 
-    connect(ui->actionBack, &QAction::triggered, m_window, &Window::goBack);
-    connect(ui->actionForward, &QAction::triggered, m_window, &Window::goForward);
+    connect(ui->actionBack, &QAction::triggered, m_window, &Window::back);
+    connect(ui->actionForward, &QAction::triggered, m_window, &Window::forward);
     connect(ui->actionRefresh, &QAction::triggered, this, [=]() {
         const QUrl &url = ui->quickWidget->source();
         ui->quickWidget->engine()->clearComponentCache();

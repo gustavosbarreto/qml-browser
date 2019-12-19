@@ -23,8 +23,8 @@ signals:
     void historyChanged();
 
 public slots:
-    void goBack();
-    void goForward();
+    void back();
+    void forward();
 
     void alert(const QString &message);
 

@@ -19,7 +19,7 @@ void Window::addToHistory(const QString &url)
     m_historyIndex++;
 }
 
-void Window::goBack()
+void Window::back()
 {
     if (m_historyIndex > 0) {
         m_location = m_history[--m_historyIndex];
@@ -27,7 +27,7 @@ void Window::goBack()
     }
 }
 
-void Window::goForward()
+void Window::forward()
 {
     if (m_historyIndex < m_history.size() - 1) {
         m_location = m_history[++m_historyIndex];
