@@ -1,5 +1,5 @@
-import QtQuick 2.12
-import QtQuick.Layouts 1.1
+import QtQuick 2.6
+import QtQuick.Layouts 1.0
 
 Rectangle {
     Component.onCompleted: window.title = "Google Loves QML"

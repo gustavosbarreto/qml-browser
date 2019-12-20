@@ -1,4 +1,4 @@
-import QtQuick 2.12
+import QtQuick 2.6
 
 Rectangle {
     width: 800
@@ -15,7 +15,7 @@ Rectangle {
         onTriggered: {
             if (playground.program != textEditor.text) {
                 playground.program = textEditor.text;
-                var playgroundItem = Qt.createQmlObject("import QtQuick 2.12\n"+textEditor.text, playground, "playgroundItem");
+                var playgroundItem = Qt.createQmlObject("import QtQuick 2.6\n"+textEditor.text, playground, "playgroundItem");
                 if (playgroundItem) {
                     if (playground.item)
                         playground.item.destroy();
