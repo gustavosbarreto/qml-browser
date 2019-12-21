@@ -61,4 +61,36 @@ Returns the text entered by the user in a prompt dialog.
 
 Displays a dialog with a message that the user needs to respond to.
 
+## QML module
 
+The QmlBrowser module provides QML types similar to basic Web Elements like links (HTML a tag).
+
+The QML types can be imported into your application using the following import statement in your .qml file.
+
+`import QmlBrowser 1.0`
+
+### LinkArea
+
+Identical to `MouseArea`, but with `href` property and a default handler for mouse clicks.
+
+Example:
+
+```qml
+LinkArea {
+  anchors.fill: parent
+  href: "http://localhost:8000/page2.qml"
+}
+```
+
+### TextLink
+
+Identical to `Text`, but with `href` property and a `LinkArea` inside.
+
+Example:
+
+```qml
+TextLink {
+  text: "Link to page2.qml"
+  href: "http://localhost:8000/page2.qml"
+}
+```
