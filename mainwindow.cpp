@@ -59,6 +59,8 @@ MainWindow::MainWindow(QWidget *parent)
        setWindowTitle(title);
     });
 
+    qmlRegisterType(QUrl("qrc:/qml/TextLink.qml"), "QmlBrowser", 1, 0, "TextLink");
+
     injectAPI();
 }
 

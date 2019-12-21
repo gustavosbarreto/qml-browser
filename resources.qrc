@@ -4,5 +4,7 @@
         <file>images/go-next.png</file>
         <file>images/go-previous.png</file>
         <file>images/view-refresh.png</file>
+        <file>qml/TextLink.qml</file>
+        <file>qml/LinkArea.qml</file>
     </qresource>
 </RCC>
