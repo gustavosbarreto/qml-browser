@@ -30,8 +30,10 @@ MainWindow::MainWindow(QWidget *parent)
     m_history = new History(this);
 
     connect(m_history, &History::updated, this, [=](const QString &url) {
-        ui->quickWidget->setSource(QUrl(url));
-        m_addressLineEdit->setText(url);
+        QTimer::singleShot(0, this, [=]() {
+            ui->quickWidget->setSource(QUrl(url));
+            m_addressLineEdit->setText(url);
+        });
     });
 
     connect(ui->actionBack, &QAction::triggered, m_history, &History::back);
