@@ -15,6 +15,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 
     ui->quickWidget->setClearColor(Qt::white);
+    ui->quickWidget->setSource(QUrl("qrc:/qml/WelcomePage.qml"));
 
     m_addressLineEdit = new QLineEdit(this);
 

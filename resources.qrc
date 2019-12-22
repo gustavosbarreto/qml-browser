@@ -6,5 +6,6 @@
         <file>images/view-refresh.png</file>
         <file>qml/TextLink.qml</file>
         <file>qml/LinkArea.qml</file>
+        <file>qml/WelcomePage.qml</file>
     </qresource>
 </RCC>
