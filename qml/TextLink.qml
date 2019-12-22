@@ -4,7 +4,7 @@ Text {
     property string href: ""
 
     LinkArea {
-        href: href
+        href: parent.href
         anchors.fill: parent
     }
 }
