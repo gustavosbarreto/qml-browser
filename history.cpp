@@ -12,12 +12,8 @@ void History::append(const QString &url)
         }
     }
 
-    if (m_history.size() > 1 && m_history[m_index] + 1 != url) {
-        m_index++;
-    } else {
-        m_index++;
-        m_history << url;
-    }
+    m_index++;
+    m_history << url;
 }
 
 void History::back()
