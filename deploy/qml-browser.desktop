@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=qml-browser
+Icon=icon
+Exec=qml-browser
+Terminal=false
+Categories=Network;
