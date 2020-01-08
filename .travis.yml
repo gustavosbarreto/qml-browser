@@ -56,7 +56,6 @@ install:
   fi
 
 script:
-- export GITHUB_TOKEN="${github_token}"
 - eval "${MATRIX_EVAL}"
 - if [ ! -z "${APPIMAGE}" ]; then
     echo "Load qt env";
