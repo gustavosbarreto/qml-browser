@@ -1,0 +1,552 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+    
+    
+      
+        <title>QML Browser</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/application.1b62728e.css">
+      
+      
+    
+    
+      <script src="assets/javascripts/modernizr.268332fc.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#features" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="." title="QML Browser" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              QML Browser
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Introduction
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="." title="QML Browser" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    QML Browser
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Introduction
+      </label>
+    
+    <a href="." title="Introduction" class="md-nav__link md-nav__link--active">
+      Introduction
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    Features
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing" class="md-nav__link">
+    Installing
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#from-source" class="md-nav__link">
+    From source
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#binary" class="md-nav__link">
+    Binary
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running" class="md-nav__link">
+    Running
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#javascript-api" class="md-nav__link">
+    JavaScript API
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#navigation" class="md-nav__link">
+    Navigation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#window" class="md-nav__link">
+    Window
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dialog" class="md-nav__link">
+    Dialog
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qml-module" class="md-nav__link">
+    QML module
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linkarea" class="md-nav__link">
+    LinkArea
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#textlink" class="md-nav__link">
+    TextLink
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    Features
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing" class="md-nav__link">
+    Installing
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#from-source" class="md-nav__link">
+    From source
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#binary" class="md-nav__link">
+    Binary
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running" class="md-nav__link">
+    Running
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#javascript-api" class="md-nav__link">
+    JavaScript API
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#navigation" class="md-nav__link">
+    Navigation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#window" class="md-nav__link">
+    Window
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dialog" class="md-nav__link">
+    Dialog
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qml-module" class="md-nav__link">
+    QML module
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linkarea" class="md-nav__link">
+    LinkArea
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#textlink" class="md-nav__link">
+    TextLink
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Introduction</h1>
+                
+                <p>QML-Browser. as the name suggests, is a browser for QML files like any other HTML(Web) Browser.</p>
+<h2 id="features">Features</h2>
+<ul>
+<li>Basic navigation: back, previous, reload</li>
+<li>JavaScript API like standard Web APIs</li>
+</ul>
+<h2 id="installing">Installing</h2>
+<h3 id="from-source">From source</h3>
+<div class="highlight"><pre><span></span>$ qmake
+$ make
+</pre></div>
+
+<h3 id="binary">Binary</h3>
+<ul>
+<li><img alt="💻" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f4bb.svg" title=":computer:" /> <a href="https://github.com/gustavosbarreto/qml-browser/releases/download/continuous/qml-browser_release.zip">Windows</a></li>
+<li><img alt="🍎" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f34e.svg" title=":apple:" /> <a href="https://github.com/gustavosbarreto/qml-browser/releases/download/continuous/qml-browser.dmg">MacOS</a></li>
+<li><img alt="🐧" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f427.svg" title=":penguin:" /> <a href="https://github.com/gustavosbarreto/qml-browser/releases/download/continuous/qml-browser.AppImage">Linux</a></li>
+</ul>
+<h2 id="running">Running</h2>
+<p>You need to serve QML files using any normal webserver. For example:</p>
+<div class="highlight"><pre><span></span>cd examples/google
+python3 -m http.server
+</pre></div>
+
+<p>Run the <code>qml-browser</code> and type in the address bar: <a href="http://localhost:8000/main.qml">http://localhost:8000/main.qml</a></p>
+<h2 id="javascript-api">JavaScript API</h2>
+<h3 id="navigation">Navigation</h3>
+<p><code>window.back()</code>  [method]</p>
+<p>The back method moves back one page in the history</p>
+<p><code>window.forward()</code> [method]</p>
+<p>Moves forward one page in the session history</p>
+<p><code>window.location</code> [property]</p>
+<p>This property sets or returns the entire URL of the current page</p>
+<h3 id="window">Window</h3>
+<p><code>window.title</code> [property]</p>
+<h3 id="dialog">Dialog</h3>
+<p>This property sets or returns the title of the current page</p>
+<p><code>window.alert(message)</code> [method]</p>
+<p>Displays an alert dialog with th specified message and an OK button.</p>
+<p><code>window.prompt(message, value)</code> [method]</p>
+<p>Returns the text entered by the user in a prompt dialog.</p>
+<p><code>window.confirm(message)</code> [method]</p>
+<p>Displays a dialog with a message that the user needs to respond to.</p>
+<h2 id="qml-module">QML module</h2>
+<p>The QmlBrowser module provides QML types similar to basic Web Elements like links (HTML a tag).</p>
+<p>The QML types can be imported into your application using the following import statement in your .qml file.</p>
+<p><code>import QmlBrowser 1.0</code></p>
+<h3 id="linkarea">LinkArea</h3>
+<p>Identical to <code>MouseArea</code>, but with <code>href</code> property and a default handler for mouse clicks.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><span class="nx">LinkArea</span> <span class="p">{</span>
+  <span class="k">anchors.fill:</span> <span class="nx">parent</span>
+  <span class="k">href:</span> <span class="s2">&quot;http://localhost:8000/page2.qml&quot;</span>
+<span class="p">}</span>
+</pre></div>
+
+<h3 id="textlink">TextLink</h3>
+<p>Identical to <code>Text</code>, but with <code>href</code> property and a <code>LinkArea</code> inside.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><span class="nx">TextLink</span> <span class="p">{</span>
+  <span class="k">text:</span> <span class="s2">&quot;Link to page2.qml&quot;</span>
+  <span class="k">href:</span> <span class="s2">&quot;http://localhost:8000/page2.qml&quot;</span>
+<span class="p">}</span>
+</pre></div>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="assets/javascripts/application.808e90bb.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"."}})</script>
+      
+    
+  </body>
+</html>
