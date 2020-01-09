@@ -7,12 +7,20 @@ QML-Browser. as the name suggests, is a browser for QML files like any other HTM
 * Basic navigation: back, previous, reload
 * JavaScript API like standard Web APIs
 
-## Building
+## Installing
+
+### From source
 
 ```sh
 $ qmake
 $ make
 ```
+
+### Binary
+
+- :computer: [Windows](https://github.com/gustavosbarreto/qml-browser/releases/download/continuous/qml-browser_release.zip)
+- :apple: [MacOS](https://github.com/gustavosbarreto/qml-browser/releases/download/continuous/qml-browser.dmg)
+- :penguin: [Linux](https://github.com/gustavosbarreto/qml-browser/releases/download/continuous/qml-browser.AppImage)
 
 ## Running
 
