@@ -22,7 +22,7 @@ environment:
       #https://www.appveyor.com/docs/build-environment/#qt
       QTDIR: C:\Qt\5.12.5\msvc2017_64
       PRJLIBS: VCRUNTIME140.dll MSVCP140.dll
-      QML_PLUGINS: QtQml QtQuick QtQuick.2 QtPositioning QtMultimedia QtLocation QtCharts QtGamepad QtGraphicalEffects 
+      QML_PLUGINS: QtQml QtQuick QtQuick.2 QtMultimedia QtGraphicalEffects QtWebEngine
 
 configuration:
   - release
