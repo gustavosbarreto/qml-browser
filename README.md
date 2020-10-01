@@ -1,6 +1,6 @@
 # QML-Browser
 
-QML-Browser. as the name suggests, is a browser for QML files like any other HTML(Web) Browser.
+QML-Browser. as the name suggests, is a browser for QML files like any other HTML(Web Browser).
 
 ## Features
 
@@ -24,7 +24,7 @@ $ make
 
 ## Running
 
-You need to serve QML files using any normal webserver. For example:
+You need to serve QML files using any normal webserver, For example:
 
 ```
 cd examples/google
@@ -71,15 +71,15 @@ Displays a dialog with a message that the user needs to respond to.
 
 ## QML module
 
-The QmlBrowser module provides QML types similar to basic Web Elements like links (HTML a tag).
+The Qml-Browser module provides QML types similar to basic Web Elements like links (HTML a tag).
 
 The QML types can be imported into your application using the following import statement in your .qml file.
 
-`import QmlBrowser 1.0`
+`import Qml-Browser 1.0`
 
 ### LinkArea
 
-Identical to `MouseArea`, but with `href` property and a default handler for mouse clicks.
+Identical to `MouseArea`, but with `href` property and a default handler for the mouse clicks.
 
 Example:
 
